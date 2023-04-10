@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stddef.h>
+
 /**
  * _strchr - Entry point
  * @s: input
@@ -7,11 +9,12 @@
  */
 char *_strchr(char *s, char c)
 {
-int j = 0;
-for (; s[j] >= '\0'; j++)
-{
-if (s[j] == c)
-return (&s[j]);
-}
-return (0);
+	int i = 0;
+
+	for (; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
+			return (&s[i]);
+	}
+	return (0);
 }
