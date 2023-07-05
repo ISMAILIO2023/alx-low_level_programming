@@ -2,24 +2,20 @@
 
 
 /**
- * get_nodeint_at_index -  returns the nth node of a listint_t linked list
- * @head: pointer
- * @index: index
+ * sum_listint - returns the sum of all the data (n) of a listint_t
+ * @head: first node
  *
- * Return: pointer or NULL
- *
+ * Return: sum, if the list is empty 0
  */
-
-
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+int sum_listint(listint_t *head)
 {
-	unsigned int x = 0;
+	int somme = 0;
 	listint_t *t = head;
 
-	while (t && x < index)
+	while (t)
 	{
+		somme += t->n;
 		t = t->next;
-		x++;
 	}
-	return (t ? t : NULL);
+	return (somme);
 }
